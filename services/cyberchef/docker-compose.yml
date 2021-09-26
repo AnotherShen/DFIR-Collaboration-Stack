@@ -1,0 +1,16 @@
+version: '3'
+services:
+  cyberchef:
+    container_name: cyberchef
+    image: mpepping/cyberchef:latest
+    restart: always
+    ports:
+      - '8080:8000'
+    networks:
+      - cyberchef
+    expose:
+      - '8080'
+      
+networks:
+  cyberchef:
+    driver: 'bridge'

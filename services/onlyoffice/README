@@ -1,0 +1,9 @@
+Entry point SQL seems to be a work around for MySQL.
+Potentially we can get the same result with:
+- MYSQL_USER=onlyoffice_user
+- MYSQL_PASSWORD=HR3jtKMR6PeX5EcD3FLk
+- MYSQL_DATABASE=onlyoffice
+
+When tested it still seems to error.
+
+Install Script should generate passwords.
