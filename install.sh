@@ -11,3 +11,10 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] 
 sudo apt-get -y update
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 sudo pip3 install docker-compose
+
+# Run each service install script
+INSTALL=$(find services -iname service_install.sh)
+for line in $(echo "$INSTALL"); do
+    echo ">> $line <<"
+    ./$line
+done
