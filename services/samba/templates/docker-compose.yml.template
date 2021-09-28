@@ -4,7 +4,7 @@ services:
     container_name: samba
     image: dperson/samba:latest
     environment:
-      TZ: 'AEST-9AEDT,M3.2.0/2:00:00,M11.1.0/2:00:00'
+      TZ: 'REPLACE1'
     networks:
       - samba
     ports:
@@ -19,8 +19,8 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - /srv/irshare:/mnt:z
-    command: '-s "irshare;/mnt;yes;no;no;irshare" -u "irshare;forensics" -p'
+      - /srv/REPLACE2:/mnt:z
+    command: '-s "REPLACE2;/mnt;yes;no;no;REPLACE3" -u "REPLACE3;REPLACE4" -p'
       
 networks:
   samba:
