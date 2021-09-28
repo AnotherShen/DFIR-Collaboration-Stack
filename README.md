@@ -13,3 +13,9 @@ cd DFIR-Collaboration-Stack
 chmod +x install.sh
 ./install.sh
 ```
+
+## Add additional TimeSketch users
+```
+cd service/timesketch/timesketch
+sudo docker-compose exec timesketch-web tsctl add_user --username <USERNAME>
+```
