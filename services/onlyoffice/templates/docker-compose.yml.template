@@ -4,7 +4,7 @@ services:
     container_name: onlyoffice-mysql-server
     image: mysql:5.7
     environment:
-     - MYSQL_ROOT_PASSWORD=JMrLyADy74tL7DQH5dXa
+     - MYSQL_ROOT_PASSWORD=REPLACE1
     networks:
      - onlyoffice
     stdin_open: true
@@ -22,21 +22,21 @@ services:
      - onlyoffice-mysql-server
      - onlyoffice-document-server
     environment:
-     - ONLYOFFICE_CORE_MACHINEKEY=z3DFHdxfesMehLASqDjd
+     - ONLYOFFICE_CORE_MACHINEKEY=REPLACE2
      - CONTROL_PANEL_PORT_80_TCP=80
      - CONTROL_PANEL_PORT_80_TCP_ADDR=onlyoffice-control-panel
      - DOCUMENT_SERVER_PORT_80_TCP_ADDR=onlyoffice-document-server
      - DOCUMENT_SERVER_JWT_ENABLED=true
-     - DOCUMENT_SERVER_JWT_SECRET=GCb7XDxfz85rBAfzh9sN
+     - DOCUMENT_SERVER_JWT_SECRET=REPLACE3
      - DOCUMENT_SERVER_JWT_HEADER=AuthorizationJwt
-     - MYSQL_SERVER_ROOT_PASSWORD=JMrLyADy74tL7DQH5dXa
+     - MYSQL_SERVER_ROOT_PASSWORD=REPLACE1
      - MYSQL_SERVER_DB_NAME=onlyoffice
      - MYSQL_SERVER_HOST=onlyoffice-mysql-server
      - MYSQL_SERVER_USER=onlyoffice_user
-     - MYSQL_SERVER_PASS=HR3jtKMR6PeX5EcD3FLk
+     - MYSQL_SERVER_PASS=REPLACE4
     networks:
      - onlyoffice
-    dns: 127.0.0.1
+    dns: REPLACE5
     ports:
      - '80:80'
      - '443:443'
@@ -61,7 +61,7 @@ services:
     restart: always
     environment:
      - JWT_ENABLED=true
-     - JWT_SECRET=GCb7XDxfz85rBAfzh9sN
+     - JWT_SECRET=REPLACE3
      - JWT_HEADER=AuthorizationJwt
     networks:
       - onlyoffice
@@ -81,7 +81,7 @@ services:
      - onlyoffice-community-server
     image: onlyoffice/controlpanel:2.9.0.351
     environment:
-     - ONLYOFFICE_CORE_MACHINEKEY=z3DFHdxfesMehLASqDjd
+     - ONLYOFFICE_CORE_MACHINEKEY=REPLACE2
     expose:
       - '80'
       - '443'
