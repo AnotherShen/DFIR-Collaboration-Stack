@@ -6,10 +6,7 @@ PASS2=$(pwgen -s 20 1)
 PASS3=$(pwgen -s 20 1)
 PASS4=$(pwgen -s 20 1)
 
-# Step 2 - Delete existing files and docker volumes before copying templates to locations
-if [[ "$(sudo docker volume ls | grep onlyoffice | wc -l)" -gt "0" ]]; then
-    sudo docker-compose down -v
-fi
+# Step 2 - Delete existing files before copying templates to locations
 [[ -d config/mysql/docker-entrypoint-initdb.d ]] && rm -rf config/mysql/docker-entrypoint-initdb.d
 [[ -f docker-compose.yml ]] && rm -f docker-compose.yml
 mkdir config/mysql/docker-entrypoint-initdb.d
@@ -40,5 +37,10 @@ openssl x509 -req -days 365 -in onlyoffice.csr -signkey onlyoffice.key -out only
 openssl dhparam -out dhparam.pem 2048
 cd ..
 
-# Step 6 - Bring service up
+# Step 6 - Delete any volumes if they exist already (equired if volumes mounted to enact some changes)
+#if [[ "$(sudo docker volume ls | grep onlyoffice | wc -l)" -gt "0" ]]; then
+#    sudo docker-compose down -v
+#fi
+
+# Step 7 - Bring service up
 sudo docker-compose up -d
