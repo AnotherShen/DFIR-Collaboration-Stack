@@ -1,5 +1,6 @@
 # DFIR Collaboration Stack
-## IN DEVELOPMENT TODO
+
+## Development Todo
 1. Add Rocket Chat service
 2. Add Portainer service
 3. Logically assign the ports for each container
@@ -12,6 +13,8 @@
 3. Samba
 4. TimeSketch
 5. NGINX (portal)
+
+![image](https://user-images.githubusercontent.com/9160174/135201899-4d002085-87b5-4459-9377-dadcf8a7c061.png)
 
 ## Install
 Run the the first time to configure the box (tested on Ubuntu 20.04), install containers and then run them
