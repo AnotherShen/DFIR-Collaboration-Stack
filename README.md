@@ -1,5 +1,11 @@
 # DFIR Collaboration Stack
-# IN DEVELOPMENT (NOT CURRENTLY WORKING)
+## IN DEVELOPMENT TODO
+1. Add Rocket Chat service
+2. Add Portainer service
+3. Logically assign the ports for each container
+4. Update static portal to link to each service
+5. Investigate TLS for TimeSketch
+
 ## Docker Services
 1. CyberChef
 2. OnlyOffice
