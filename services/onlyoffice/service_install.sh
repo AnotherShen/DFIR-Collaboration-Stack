@@ -27,15 +27,15 @@ then
 fi
 sed -i -e "s|REPLACE5|$DNS|g" docker-compose.yml
 
-# Step 5 - Generate Certs for 365 days
+# Step 5 - Generate Certs for 365 days <- REMOVED Caused the document editor to serve 503 error codes
 [[ -d certs ]] && sudo rm -rf certs
 mkdir certs
-cd certs
-openssl genrsa -out onlyoffice.key 2048
-openssl req -new -key onlyoffice.key -out onlyoffice.csr
-openssl x509 -req -days 365 -in onlyoffice.csr -signkey onlyoffice.key -out onlyoffice.crt
-openssl dhparam -out dhparam.pem 2048
-cd ..
+#cd certs
+#openssl genrsa -out onlyoffice.key 2048
+#openssl req -new -key onlyoffice.key -out onlyoffice.csr
+#openssl x509 -req -days 365 -in onlyoffice.csr -signkey onlyoffice.key -out onlyoffice.crt
+#openssl dhparam -out dhparam.pem 2048
+#cd ..
 
 # Step 6 - Delete any volumes if they exist already (equired if volumes mounted to enact some changes)
 #if [[ "$(sudo docker volume ls | grep onlyoffice | wc -l)" -gt "0" ]]; then
