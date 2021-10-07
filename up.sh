@@ -8,4 +8,6 @@ for line in $(echo "$SCRIPT"); do
     cd "$DIR"
     ./service_up.sh
     cd ../..
+    # Attempt to prevent PC/VM from chugging with 5s delays
+    sleep 5
 done
