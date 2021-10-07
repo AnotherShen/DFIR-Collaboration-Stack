@@ -4,6 +4,7 @@
 1. Debug TimeSketch elasticstack error
 2. Add a TimeSketch user helper script
 3. Populate SMB IP on NGINX portal when installed
+4. Rename reset_docker to reset and add a confirmation
 
 ## Docker Services
 1. CyberChef
