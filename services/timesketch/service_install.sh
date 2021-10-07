@@ -19,10 +19,16 @@ sudo ./deploy_timesketch.sh
 # Step 3 - Enable SSL <- Unsure if possible
 
 # Step 4 - Change ports
-sudo sed -i -e "s/80/8004/g" -e "s/443:443/4444:4444/g" timesketch/etc/nginx.conf
-sudo sed -i -e "s/80:80/8004:8004/g" -e "s/443:443/4444:4444/g" timesketch/docker-compose.yml
+#sudo sed -i -e "s/80/8004/g" -e "s/443:443/4444:4444/g" timesketch/etc/nginx.conf
+#sudo sed -i -e "s/80:80/8004:8004/g" -e "s/443:443/4444:4444/g" timesketch/docker-compose.yml
+
+# Step 4 - Replace compose file
+sudo rm timesketch/docker-compose.yml
+sudo cp templates/docker-compose.yml.template timesketch/docker-compose.yml
 
 # Step 5 - Deploy service
 cd timesketch
 sudo docker-compose up -d
+# Delay 5s to allow container time to launch
+sleep 5
 sudo docker-compose exec timesketch-web tsctl add_user --username "$USERNAME"
