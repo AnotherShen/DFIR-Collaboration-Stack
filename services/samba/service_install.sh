@@ -7,12 +7,13 @@ if [ "$TIMEZONE" = "" ]; then
     TIMEZONE="GMT"
 fi
 
-# Step 2 - Get share name
+# Step 2 - Get share name and set it on the portal
 SHARENAME=""
 read -p "Enter Samba Share Name [IRSHARE]: " SHARENAME
 if [ "$SHARENAME" = "" ]; then
     SHARENAME="IRSHARE"
 fi
+sed -i -e "s|IRSHARE|$SHARENAME|g" ../nginx/html/index.html
 
 # Step 3 - Get share username
 USERNAME=""

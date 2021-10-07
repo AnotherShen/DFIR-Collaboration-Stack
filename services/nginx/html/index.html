@@ -13,6 +13,10 @@
         <link rel="stylesheet" href="css/roboto.css"/>
         <!-- MDB -->
         <link rel="stylesheet" href="css/mdb.min.css" />
+        <!-- Get Host (IP)-->
+        <script type="text/javascript">
+            var ip = location.host;
+        </script>
     </head>
     <body>
         <!-- Start Main -->
@@ -24,7 +28,9 @@
                         <div class="card-body">
                             <h5 class="card-title">OnlyOffice</h5>
                             <p class="card-text">Collaborative office.</p>
-                            <a href="#"><button type="button" class="btn btn-primary">Open</button></a>
+                            <script language="JavaScript">
+                                document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8001' + window.location.pathname + '" ><button type="button" class="btn btn-primary">Open</button></a> ' );
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -34,7 +40,9 @@
                         <div class="card-body">
                             <h5 class="card-title">CyberChef</h5>
                             <p class="card-text">Data manipulation.</p>
-                            <a href="#"><button type="button" class="btn btn-primary">Open</button></a>
+                            <script language="JavaScript">
+                                document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8000' + window.location.pathname + '" ><button type="button" class="btn btn-primary">Open</button></a> ' );
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -44,7 +52,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Timesketch</h5>
                             <p class="card-text">Collaborative timeline.</p>
-                            <a href="#"><button type="button" class="btn btn-primary">Open</button></a>
+                            <script language="JavaScript">
+                                document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8004' + window.location.pathname + '" ><button type="button" class="btn btn-primary">Open</button></a> ' );
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -54,7 +64,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Rocket Chat</h5>
                             <p class="card-text">Instant messaging.</p>
-                            <a href="#"><button type="button" class="btn btn-primary">Open</button></a>
+                            <script language="JavaScript">
+                                document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8003' + window.location.pathname + '" ><button type="button" class="btn btn-primary">Open</button></a> ' );
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -64,7 +76,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Portainer</h5>
                             <p class="card-text">Docker interface.</p>
-                            <a href="#"><button type="button" class="btn btn-primary">Open</button></a>
+                            <script language="JavaScript">
+                                document.write('<a href="' + window.location.protocol + '//' + window.location.hostname + ':8002' + window.location.pathname + '" ><button type="button" class="btn btn-primary">Open</button></a> ' );
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -74,7 +88,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Samba</h5>
                             <p class="card-text">File sharing.</p>
-                            <a href="#"><button type="button" class="btn btn-primary">Open</button></a>
+                            <h6>smb://IP/IRSHARE</h6>
                         </div>
                     </div>
                 </div>
