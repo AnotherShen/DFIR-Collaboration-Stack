@@ -27,7 +27,7 @@ chmod +x *.sh
 ```
 
 ## Up
-Starts docker containers
+Starts docker containers (Docker auto starts on PC/VM start-up, only needed if manually stopped.)
 ```
 ./up.sh
 ```
