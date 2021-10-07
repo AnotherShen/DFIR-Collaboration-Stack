@@ -5,11 +5,11 @@ services:
     image: mpepping/cyberchef:latest
     restart: always
     ports:
-      - '8080:8000'
+      - '8000:8000'
     networks:
       - cyberchef
     expose:
-      - '8080'
+      - '8000'
       
 networks:
   cyberchef:

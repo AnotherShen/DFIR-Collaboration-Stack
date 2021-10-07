@@ -38,8 +38,8 @@ services:
      - onlyoffice
     dns: REPLACE5
     ports:
-     - '80:80'
-     - '443:443'
+     - '8001:80'
+     - '4443:443'
      - '5222:5222'
     stdin_open: true
     tty: true
@@ -66,8 +66,8 @@ services:
     networks:
       - onlyoffice
     expose:
-      - '80'
-      - '443'
+      - '8001'
+      - '4443'
     volumes:
        - document_data:/var/www/onlyoffice/Data
        - document_log:/var/log/onlyoffice
@@ -83,8 +83,8 @@ services:
     environment:
      - ONLYOFFICE_CORE_MACHINEKEY=REPLACE2
     expose:
-      - '80'
-      - '443'
+      - '8001'
+      - '4443'
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
