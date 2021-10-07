@@ -1,18 +1,18 @@
 # DFIR Collaboration Stack
 
 ## Development Todo
-1. Add Rocket Chat service
-2. Add Portainer service
-3. Logically assign the ports for each container
-4. Update static portal to link to each service
-5. Investigate TLS for TimeSketch
+1. Debug TimeSketch elasticstack error
+2. Add a TimeSketch user helper script
+3. Populate SMB IP on NGINX portal when installed
 
 ## Docker Services
 1. CyberChef
 2. OnlyOffice
 3. Samba
 4. TimeSketch
-5. NGINX (portal)
+5. RocketChat
+6. Portainer
+7. NGINX (portal)
 
 ![image](https://user-images.githubusercontent.com/9160174/135201899-4d002085-87b5-4459-9377-dadcf8a7c061.png)
 
@@ -21,7 +21,7 @@ Run the the first time to configure the box (tested on Ubuntu 20.04), install co
 ```
 git clone https://github.com/AnotherShen/DFIR-Collaboration-Stack.git
 cd DFIR-Collaboration-Stack
-chmod +x install.sh
+chmod +x *.sh
 ./install.sh
 ```
 
@@ -41,4 +41,12 @@ Stops docker containers
 ```
 cd service/timesketch/timesketch
 sudo docker-compose exec timesketch-web tsctl add_user --username <USERNAME>
+```
+
+## Reset Environment
+```
+./reset_docker.sh
+sudo rm -rf services/timesketch/timesketch
+sudo rm -rf services/rocketchat/data
+(4 other files)
 ```
