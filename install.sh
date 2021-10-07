@@ -13,8 +13,11 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 sudo pip3 install docker-compose
 
 # Run each service install script
-INSTALL=$(find services -iname service_install.sh)
+INSTALL=$(sudo find services -iname service_install.sh)
 for line in $(echo "$INSTALL"); do
     echo ">> $line <<"
-    ./$line
+    DIR=$(echo "$line" | sed -e "s|/service_install.sh||g")
+    cd "$DIR"
+    ./service_install.sh
+    cd ../..
 done
