@@ -36,7 +36,7 @@ sudo snap install code --classic
 git config --global user.name "GITHUBUSERNAME"
 git config --global user.email "CHECKYOURPROFILE@users.noreply.github.com"
 ```
-Clone repository and install
+Clone repository and install (or do it through VS Code)
 ```
 mkdir ~/Documents/git && mv ~/Documents/git
 git clone https://github.com/AnotherShen/DFIR-Collaboration-Stack.git
