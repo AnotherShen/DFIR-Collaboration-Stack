@@ -18,8 +18,27 @@
 ![image](https://user-images.githubusercontent.com/9160174/135201899-4d002085-87b5-4459-9377-dadcf8a7c061.png)
 
 ## Install
-Run the the first time to configure the box (tested on Ubuntu 20.04), install containers and then run them
+To install, download this repository and run the installer (tested on Ubuntu 20.04)
 ```
+wget https://github.com/AnotherShen/DFIR-Collaboration-Stack/releases/latest (yet to be released)
+(extract & move)
+chmod +x *.sh
+./install.sh
+sudo apt update && sudo apt install git
+```
+
+## Development Environment Set-up
+To develop, follow the steps below (tested on Ubuntu 20.04)
+Install packages and configure
+```
+sudo apt update && sudo apt install git
+sudo snap install code --classic
+git config --global user.name "GITHUBUSERNAME"
+git config --global user.email "CHECKYOURPROFILE@users.noreply.github.com"
+```
+Clone repository and install
+```
+mkdir ~/Documents/git && mv ~/Documents/git
 git clone https://github.com/AnotherShen/DFIR-Collaboration-Stack.git
 cd DFIR-Collaboration-Stack
 chmod +x *.sh
