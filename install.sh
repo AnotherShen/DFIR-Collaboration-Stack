@@ -20,7 +20,7 @@ fi
 # Run each service install script
 INSTALL=$(sudo find services -iname service_install.sh)
 for line in $(echo "$INSTALL"); do
-    echo ">> $line <<"
+    echo -e "\e[36m>> $line <<\e[0m"
     DIR=$(echo "$line" | sed -e "s|/service_install.sh||g")
     cd "$DIR"
     ./service_install.sh
