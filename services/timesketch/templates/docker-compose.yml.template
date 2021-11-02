@@ -8,8 +8,6 @@ services:
     command: timesketch-web
     ports:
       - "8004:5000"
-    expose:
-      - "8004"
     volumes:
       - ./etc/timesketch:/etc/timesketch/
       - ./upload:/usr/share/timesketch/upload/
