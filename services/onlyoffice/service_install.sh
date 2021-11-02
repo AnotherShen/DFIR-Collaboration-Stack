@@ -20,7 +20,6 @@ sed -i -e "s|REPLACE4|$PASS4|g" config/mysql/docker-entrypoint-initdb.d/onlyoffi
 # Step 4 - Set DNS for offline environements
 DNS="127.0.0.1"
 read -p "Is OnlyOffice going to be internet connected? (Y/[N]) " -n 1 -r
-echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     DNS="8.8.8.8"
