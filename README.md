@@ -64,9 +64,7 @@ sudo docker-compose exec timesketch-web tsctl add_user --username <USERNAME>
 ```
 
 ## Reset Environment
+The following script will kill all containers and remove all volumes & generated files.
 ```
 ./reset_docker.sh
-sudo rm -rf services/timesketch/timesketch
-sudo rm -rf services/rocketchat/data
-(4 other files)
 ```

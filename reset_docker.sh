@@ -15,3 +15,4 @@ sudo rm -rf services/rocketchat/data
 sudo rm -f services/onlyoffice/docker-compose.yml
 sudo rm -rf services/onlyoffice/config/mysql/docker-entrypoint-initdb.d
 sudo rm -f services/timesketch/deploy_timesketch.sh
+sudo rm -f services/samba/docker-compose.yml
