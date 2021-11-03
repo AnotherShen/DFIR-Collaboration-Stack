@@ -1,7 +1,7 @@
 # DFIR Collaboration Stack
 
 ## Development Todo
-1. Fix TimeSketch compose (broken af)
+1. Fix TimeSketch docker compose (broken af)
 2. Add a TimeSketch user helper script
 3. Populate SMB IP on NGINX portal when installed
 4. Rename reset_docker to reset and add a confirmation
