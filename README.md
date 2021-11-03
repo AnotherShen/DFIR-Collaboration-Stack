@@ -1,7 +1,7 @@
 # DFIR Collaboration Stack
 
 ## Development Todo
-1. Debug TimeSketch elasticstack error
+1. Fix TimeSketch compose (broken af)
 2. Add a TimeSketch user helper script
 3. Populate SMB IP on NGINX portal when installed
 4. Rename reset_docker to reset and add a confirmation
@@ -10,7 +10,7 @@
 1. CyberChef
 2. OnlyOffice
 3. Samba
-4. TimeSketch
+4. TimeSketch (broken)
 5. RocketChat
 6. Portainer
 7. NGINX (portal)
