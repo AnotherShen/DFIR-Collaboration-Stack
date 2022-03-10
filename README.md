@@ -1,8 +1,8 @@
 # DFIR Collaboration Stack
 
 ## Development Todo
-1. Fix TimeSketch docker compose (broken af)
-2. Add a TimeSketch user helper script
+1. Remove TimeSketch
+2. Add [IrisWeb](https://github.com/dfir-iris/iris-web)
 3. Populate SMB IP on NGINX portal when installed
 4. Rename reset_docker to reset and add a confirmation
 
