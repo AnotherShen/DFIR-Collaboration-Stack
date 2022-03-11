@@ -6,6 +6,7 @@
 3. Populate SMB IP on NGINX portal when installed
 4. Rename reset_docker to reset and add a confirmation
 5. Add RedMine or XWiki (project management tool)
+6. Investigate swapping RocketChat with Revolt (especially when ScreenShare is added)
 
 ## Docker Services
 1. CyberChef
