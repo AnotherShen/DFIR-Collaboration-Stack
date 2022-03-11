@@ -5,6 +5,7 @@
 2. Add [IrisWeb](https://github.com/dfir-iris/iris-web)
 3. Populate SMB IP on NGINX portal when installed
 4. Rename reset_docker to reset and add a confirmation
+5. Add RedMine or XWiki (project management tool)
 
 ## Docker Services
 1. CyberChef
