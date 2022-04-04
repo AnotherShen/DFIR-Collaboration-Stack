@@ -1,5 +1,7 @@
 # DFIR Collaboration Stack
 
+# Unsupported demonstration. Realisation under development.
+
 ## Development Todo
 1. Remove TimeSketch
 2. Add [IrisWeb](https://github.com/dfir-iris/iris-web)
